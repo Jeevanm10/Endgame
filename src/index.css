@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+   font-family: "Hanken Grotesk", Arial, sans-serif;
+    background-color: #262626;
+    color: #D9D9D9;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+  text-align: center;
+  max-width: 450px;
+}
+header > h1{
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F9F4DA;
+}
+header > p{
+  font-size: 0.875rem;
+  color: #8E8E8E;
+}
+
+.game-status{
+  background-color: #10A95B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F4DA;
+  border-radius: 5px;
+  margin-block: 30px;
+  max-width: 450px;
+}
+.game-status>p{
+  margin: 5px;
+}
+.game-status>h2{
+  font-size: 1.25rem; 
+  margin: 5px;
+}
+
+.lang-section{
+  display: flex;
+  justify-content: center;
+  max-width: 450px;
+  flex-wrap: wrap;
+  gap: 5px ;
+  margin-bottom: 36px;
+}
+.chip{
+  border-radius: 2px;
+  padding: 5px;
+}
+.word{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.word > span{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  margin-right: 2px;
+  border-bottom: 2px solid #F9F4DA ;
+  font-size: 1.125re;
+}
+
+.keyboard{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 450px;
+  margin-bottom: 36px;
+}
+.keyboard > button{
+  height: 35px;
+  width: 35px;
+  background-color: #fcba29;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.125rem;
+}
+.keyboard > button.correct{
+  background-color: #10A95B;
+}
+.keyboard > button.wrong{
+  background-color: #EC5D49;
+}
+.new-game-btn{
+  background-color: #11b5e5;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  display: block;
+  margin-inline: auto;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1.125rem;
+}

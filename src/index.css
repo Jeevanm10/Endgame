@@ -9,13 +9,18 @@ body{
     color: #D9D9D9;
     padding: 20px;
     height: 100vh;
+  }
+  
+  main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 header{
   text-align: center;
-  max-width: 450px;
+  max-width: 350px;
 }
 header > h1{
   font-size: 1.25rem;
@@ -28,14 +33,28 @@ header > p{
 }
 
 .game-status{
-  background-color: #10A95B;
+  min-height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: #F9F4DA;
   border-radius: 5px;
   margin-block: 30px;
-  max-width: 450px;
+  width: 100%;
+  max-width: 350px;
+}
+.game-status.won{
+  background-color: #10A95B;
+}
+.game-status.lost{
+  background-color: #ba2a2a;
+}
+.game-status.farewell{
+    background-color: #7A5EA7;
+    border: 1px dashed #323232;
+    font-style: italic;
+    font-weight: 400;
 }
 .game-status>p{
   margin: 5px;
@@ -48,14 +67,28 @@ header > p{
 .lang-section{
   display: flex;
   justify-content: center;
-  max-width: 450px;
+  max-width: 350px;
   flex-wrap: wrap;
   gap: 5px ;
   margin-bottom: 36px;
 }
-.chip{
+span.chip{
   border-radius: 2px;
   padding: 5px;
+  position: relative;
+}
+.chip.lost::before{
+  content: "💀";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .word{
   display: flex;
@@ -97,6 +130,10 @@ header > p{
 .keyboard > button.wrong{
   background-color: #EC5D49;
 }
+.keyboard > button:disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 .new-game-btn{
   background-color: #11b5e5;
   border: 1px solid #d7d7d7;
@@ -108,4 +145,7 @@ header > p{
   padding: 6px 12px;
   cursor: pointer;
   font-size: 1.125rem;
+}
+.missed-letter{
+  color: #EC5D49;
 }

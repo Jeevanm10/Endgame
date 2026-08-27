@@ -7,7 +7,7 @@ import {useWindowSize} from 'react-use';
 
 export default function AssemblyEndgame() {
   const {width,height} = useWindowSize()
-  const [currentWord,setCurrentWord] = React.useState("react")
+  const [currentWord,setCurrentWord] = React.useState(() => getRandomWord())
   const [guessedLetter,setGuessedLetter] = React.useState([])
   const alphabets = "abcdefghijklmnopqrstuvwxyz"
   const lastGuessed = guessedLetter[guessedLetter.length-1]

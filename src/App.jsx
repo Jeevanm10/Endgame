@@ -7,7 +7,7 @@ import {useWindowSize} from 'react-use';
 
 export default function AssemblyEndgame() {
   const {width,height} = useWindowSize()
-  const [currentWord,setCurrentWord] = React.useState(() => getRandomWord())
+  const [currentWord,setCurrentWord] = React.useState("react")
   const [guessedLetter,setGuessedLetter] = React.useState([])
   const alphabets = "abcdefghijklmnopqrstuvwxyz"
   const lastGuessed = guessedLetter[guessedLetter.length-1]
@@ -84,8 +84,8 @@ export default function AssemblyEndgame() {
   return(
     <main>
       {isGameWon &&  <Confetti
-      width={width}
-      height={height}
+      width={width-2}
+      height={height-2}
       recycle={false}
       numberOfPieces={1000}
     />}
